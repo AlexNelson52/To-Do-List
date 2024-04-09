@@ -1,3 +1,99 @@
-.container{
-  color: red
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body, html{
+  height: 100%;
+  background-color: rgba(66, 66, 102, 0.425);
+  font-family: roboto;
+}
+
+.container {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Example columns */
+  grid-template-rows: repeat(auto-fill, minmax(100px, 1fr)); /* Example rows */
+}
+
+#navBar{
+  height: 5rem;
+  grid-area: 1/1/10/13;
+  text-align: center;
+}
+
+.leftSideBar{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.877);
+  color: white;
+  grid-area: 2/1/14/4;
+  align-items: center;
+}
+
+#projectArea{
+  grid-area: 2/4/14/200;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+}
+
+#projectForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10%;
+}
+
+input, select{
+  width: 15rem;
+  text-align: center;
+  border-radius: 5px;
+  background-color: rgba(15, 15, 15, 0.363);
+  color: white
+}
+
+#projectArea{
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 5%
+}
+
+#listContainer{
+  display: flex;
+  height: 20rem;
+  width: 15rem;
+  gap: 10%;
+  flex-direction: column;
+  border: 1px solid black;
+
+}
+
+#removeBtn{
+  opacity: 3;
+  border: none;
+  width: 10px;
+  color: red;
+  
+}
+
+#removeBtn:hover{
+  background-color: red;
+  border: none;
+  color: rgb(255, 255, 255);
+}
+
+#removeBtnDiv{
+  display: flex;
+  justify-content: end;
+  padding-top: 5.5rem;
 }

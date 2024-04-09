@@ -3,11 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= htmlWebpackPlugin.options.title %></title>
+  <title>To-Do-List</title>
 </head>
 <body>
   <div class="container">
-    Hello
+    <nav id="navBar">
+    <h1 id="leftSideBarH1">To Do List</h1>
+  </nav>
+    <div class="leftSideBar">
+      <form id="projectForm">
+      <label class="inputLabel">Project</label>
+      <input type="text" id="userInputProject">
+      <label class="inputLabel">Description</label>
+      <input type="text" id="userInputDescription">
+      <label  class="inputLabel" for="userInputDate">Due Date</label>
+      <input type="date" id="userInputDate">
+      <label class="inputLabel">Priority</label>
+      <select id="userInputPriority">
+        <option value="High">High</option>
+        <option value="High">Medium</option>
+        <option value="High">Low</option>
+      </select>
+      <label class="inputLabel">Notes</label>
+      <input type="text" id="userInputNotes">
+      <button type="submit" form="projectForm" id="formBtn">Submit</button>
+      </form>
+    </div>
+    <div id="projectArea">
+    </div>
   </div>
 </body>
 </html>
