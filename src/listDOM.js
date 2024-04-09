@@ -1,12 +1,17 @@
-const mainContainer = document.querySelector('#projectArea')
-
 export {DomCreator}
-
+import { storage } from "./localStorageDOM"
+export {arr}
+const mainContainer = document.querySelector('#projectArea')
+let arr = []
 
  function DomCreator(book){
+  for(let i = 0; i > arr.length; i++)
+  book.id = i
+  arr.push(book)
+  storage(arr)
+
   const listContainer = document.createElement('div')
   listContainer.id = 'listContainer'
-
   const projectName = document.createElement('p');
   projectName.textContent = ` ${book.title}`
   const projectDescription = document.createElement('p');
@@ -24,6 +29,13 @@ export {DomCreator}
   removeBtn.textContent = 'X'
   removeBtn.addEventListener('click', () => {
     mainContainer.removeChild(listContainer)
+    console.log(removeBtn);
+    for(let i = 0; i < localStorage.length; i++){
+      let item = JSON.parse(localStorage['Task'])
+      if(item[i].itemID === book.id){
+        item.splice(i,1);
+      }
+    }
   })
 
   listContainer.appendChild(projectName)

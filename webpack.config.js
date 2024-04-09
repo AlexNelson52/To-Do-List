@@ -6,6 +6,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'main.js',
+    clean: true,
     path: path.resolve(__dirname, 'dist'),
   },
   devtool: 'source-map',
