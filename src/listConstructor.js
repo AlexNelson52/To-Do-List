@@ -2,7 +2,6 @@
 // Title, Description, dueDate, priority, notes, checklist
 export{ToDoList}
 
-
 class ToDoList {
   constructor(title, description, dueDate, priority, notes){
     this.title = title;
