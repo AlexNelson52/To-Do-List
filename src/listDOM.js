@@ -5,8 +5,6 @@ const mainContainer = document.querySelector('#projectArea')
 let arr = []
 
  function DomCreator(book){
-  for(let i = 0; i > arr.length; i++)
-  book.id = i
   arr.push(book)
   storage(arr)
 
