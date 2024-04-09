@@ -29,13 +29,14 @@ let arr = []
   removeBtn.textContent = 'X'
   removeBtn.addEventListener('click', () => {
     mainContainer.removeChild(listContainer)
-    console.log(removeBtn);
+    console.log(book.title);
     for(let i = 0; i < localStorage.length; i++){
       let item = JSON.parse(localStorage['Task'])
-      if(item[i].itemID === book.id){
-        item.splice(i,1);
-      }
-    }
+     if(item[i].title === book.title){
+      item.splice(i,1)
+      arr.splice(i,1)
+      storage(arr)
+     }}
   })
 
   listContainer.appendChild(projectName)
