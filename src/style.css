@@ -7,42 +7,48 @@
 
 body, html{
   height: 100%;
-  background-color: rgba(66, 66, 102, 0.425);
+  background-color: #1d3557;
   font-family: roboto;
+  width: 100%;
 }
 
 .container {
   display: grid;
-  width: 100vw;
   height: 100vh;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Example columns */
-  grid-template-rows: repeat(auto-fill, minmax(100px, 1fr)); /* Example rows */
+  grid-template-columns: repeat(10, minmax(100px, 1fr)); /* Example columns */
+  grid-template-rows: repeat(10, minmax(100px, 1fr)); /* Example rows */
 }
 
 #navBar{
   height: 5rem;
-  grid-area: 1/1/10/13;
+  width: 100%;
+  grid-area: 1/6/8/9;
   text-align: center;
+  padding-top: 15px;
+  color: #b6ccee;
+  font-size: 30px;
 }
 
 .leftSideBar{
   display: flex;
   flex-direction: column;
   text-align: center;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.877);
+  min-height: 50rem;
+  background-color: #457b9d;
   color: white;
-  grid-area: 2/1/14/4;
+  grid-area: 2/1/30/4;
   align-items: center;
+  gap: 40px;
+  border-radius: 10px;
 }
 
 #projectArea{
   grid-area: 2/4/14/200;
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  height: 100%;
+  background-color: #a8dadc;
+  color: #1d3557;
+  min-height: 50rem;
   width: 100%;
-  border: 1px solid black;
+  border-radius: 10px;
 }
 
 #projectForm{
@@ -50,14 +56,42 @@ body, html{
   flex-direction: column;
   align-items: center;
   padding-top: 10%;
+  gap: 20px;
 }
 
-input, select{
+.formInput, select{
   width: 15rem;
+  height: 2rem;
   text-align: center;
   border-radius: 5px;
   background-color: rgba(15, 15, 15, 0.363);
-  color: white
+  color: white;
+  border: none;
+}
+.button-10 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius: 6px;
+  border: .5px solid #709de0;
+  color: #fff;
+  background: linear-gradient(180deg, #4B91F7 0%, #367AF6 100%);
+   background-origin: border-box;
+  box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-10:focus {
+  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
+}
+
+.button-10:hover{
+  cursor: pointer;
 }
 
 #projectArea{
@@ -65,24 +99,24 @@ input, select{
   justify-content: space-evenly;
   text-align: center;
   flex-wrap: wrap;
-  gap: 5%
+  gap: 5%;
+  width: 100%;
 }
 
 #listContainer{
   display: flex;
-  height: 20rem;
-  width: 15rem;
+  height: 100%;
+  width: 100%;
   gap: 10%;
   flex-direction: column;
-  border: 1px solid black;
-
 }
 
 #removeBtn{
-  opacity: 3;
-  border: none;
-  width: 10px;
   color: red;
+  background-color: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
 }
 
 #removeBtn:hover{
@@ -94,5 +128,42 @@ input, select{
 #removeBtnDiv{
   display: flex;
   justify-content: end;
-  padding-top: 3.1rem;
 }
+
+.sidebarProjects{
+  padding-top: 20px;
+  width: 15rem;
+  height: 80%;
+  border: 1px solid black;
+  text-align: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #1d3557;
+}
+
+.sidebarProjects:hover{
+  background-color: #367AF6;
+  color: black;
+  cursor: pointer;
+  user-select: none;
+}
+
+#projectSideHolder{
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+}
+
+#projectHeaderDiv{
+  display: flex;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-top: 1px;
+  height: 10%;
+  align-items: center;
+  justify-content: center;
+  background-color: #367AF6;
+  color: white;
+  font-size: 50px;
+}
+

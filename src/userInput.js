@@ -5,7 +5,5 @@ export {listCreator}
 function listCreator(title, description, dueDate, priority, notes) {
   let newTask = new ToDoList(title, description, dueDate,priority, notes)
    DomCreator(newTask)
-
-   
 }
 

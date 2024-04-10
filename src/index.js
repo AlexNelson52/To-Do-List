@@ -13,11 +13,13 @@ displayStorage();
 
 formBtn.addEventListener('click', () => {
   event.preventDefault();
+  if (projectName.value !== ''){
   listCreator(projectName.value, descriptionInput.value, dateInput.value, priorityInput.value, notesInput.value)
   projectName.value = ''
   descriptionInput.value = ''
   dateInput.value = ''
   priorityInput.value = ''
   notesInput.value = ''
+  }
 })
 
