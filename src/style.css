@@ -67,6 +67,7 @@ body, html{
   background-color: rgba(15, 15, 15, 0.363);
   color: white;
   border: none;
+  background-color: #1d3557;
 }
 .button-10 {
   display: flex;

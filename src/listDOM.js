@@ -10,10 +10,11 @@ let arr = []
   arr.push(book)
   storage(arr)
 
+
   const sideBarProject = document.createElement('div')
   sideBarProject.classList.add('sidebarProjects')
   const sideBarProjectText = document.createElement('p')
-  sideBarProject.textContent = book.title 
+  sideBarProjectText.textContent = book.title
 
   sideBarProject.appendChild(sideBarProjectText)
 
@@ -28,6 +29,8 @@ let arr = []
   projectSideHolder.appendChild(sideBarProject)
 
   sideBarProject.addEventListener('click', () => {
+    event.stopPropagation();
+
   mainContainer.textContent = ''
   const listContainer = document.createElement('div')
   listContainer.id = 'listContainer'
@@ -52,13 +55,13 @@ let arr = []
   listContainer.appendChild(projectPriority)
   listContainer.appendChild(projectNotes)
   mainContainer.appendChild(listContainer)
+  })
 
   removeBtn.addEventListener('click', () => {
     event.stopPropagation();
-
+    mainContainer.textContent = ''
     projectSideHolder.removeChild(sideBarProject)
-    
-    mainContainer.removeChild(listContainer)
+
 
     for(let i = 0; i < localStorage.length; i++){
       let item = JSON.parse(localStorage['Task'])
@@ -68,5 +71,5 @@ let arr = []
       storage(arr)
      }}
   })
-  })
 }
+
