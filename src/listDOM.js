@@ -30,7 +30,7 @@ function buttonCreator(book){
   const removeBtn = document.createElement('button')
   removeBtn.id = 'removeBtn'
   removeBtn.textContent = 'X'
-  removeBtn.classList.add(`${book.title}`)
+  removeBtn.classList.add(`${arr.length}`)
   removeBtnDiv.appendChild(removeBtn)
   sideBarProject.appendChild(removeBtnDiv)
   projectSideHolder.appendChild(sideBarProject)
@@ -106,9 +106,8 @@ function sideBarClickDisplay(book,test){
 }
 
 function sideBarRemove(elementClass, parentElement, childElement, book){
-  console.log(elementClass);
   for(let i = 0; i < arr.length; i++){
-    if(arr[i].title === elementClass){
+    if(arr[i].title === book.title){
      mainContainer.textContent = ''
      arr.splice(i,1)
      parentElement.removeChild(childElement)
